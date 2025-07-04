@@ -1,16 +1,32 @@
-# LoanLens - Loan Prediction API
+# LoanLens - AI Loan Prediction System
 
-A machine learning-powered API for predicting loan approval status using FastAPI.
+A complete full-stack application for predicting loan approval status using advanced machine learning algorithms.
 
-## Features
+## 🚀 Features
 
+### Backend (FastAPI)
 - **Machine Learning Model**: Uses Logistic Regression trained on loan application data
 - **REST API**: FastAPI-based API with automatic documentation
-- **Web Interface**: Simple HTML frontend for testing
 - **Input Validation**: Pydantic models for request validation
 - **Health Checks**: API health monitoring endpoint
 
-## Setup and Installation
+### Frontend (React)
+- **Modern UI**: Beautiful, responsive interface built with React and Tailwind CSS
+- **Smooth Animations**: Enhanced user experience with Framer Motion
+- **Multi-step Form**: Intuitive step-by-step loan application process
+- **Real-time Predictions**: Instant loan approval predictions with probability scores
+- **Mobile-First Design**: Optimized for all devices
+
+## 🛠️ Tech Stack
+
+- **Backend**: FastAPI, Python, Scikit-learn, Pandas, NumPy
+- **Frontend**: React 18, Vite, Tailwind CSS, Framer Motion
+- **ML Model**: Logistic Regression with feature engineering
+- **API Communication**: Axios with proxy configuration
+
+## 🚀 Quick Start
+
+### Backend Setup
 
 1. **Navigate to the server directory**:
    ```bash
@@ -28,22 +44,52 @@ A machine learning-powered API for predicting loan approval status using FastAPI
    ```
    Make sure to run all cells to generate the `loan_model.pkl` file.
 
-## Running the API
-
-1. **Start the FastAPI server**:
+4. **Start the FastAPI server**:
    ```bash
    python api.py
    ```
-   
-   Or using uvicorn directly:
+
+### Frontend Setup
+
+1. **Navigate to the frontend directory**:
    ```bash
-   uvicorn api:app --reload --host 0.0.0.0 --port 8000
+   cd frontend
    ```
 
-2. **Access the API**:
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Access the application**:
+   - Frontend: http://localhost:3000
    - API Documentation: http://localhost:8000/docs
-   - Alternative docs: http://localhost:8000/redoc
-   - Web Interface: Open `index.html` in your browser
+
+## 📁 Project Structure
+
+```
+loanlens/
+├── server/                 # Backend (FastAPI)
+│   ├── api.py             # Main API server
+│   ├── main.ipynb         # ML model training
+│   ├── loan_model.pkl     # Trained model
+│   ├── requirements.txt   # Python dependencies
+│   └── test_api.py        # API tests
+├── frontend/              # Frontend (React)
+│   ├── src/
+│   │   ├── components/    # Reusable components
+│   │   ├── pages/         # Page components
+│   │   ├── services/      # API services
+│   │   └── App.jsx        # Main app
+│   ├── package.json       # Node dependencies
+│   └── vite.config.js     # Vite configuration
+└── README.md              # This file
+```
 
 ## API Endpoints
 
